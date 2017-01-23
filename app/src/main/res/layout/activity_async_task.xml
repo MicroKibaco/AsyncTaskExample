@@ -9,8 +9,12 @@
 
     <Button
             android:id="@+id/load_img"
-            android:text="加载图片"
+            android:text="异步加载图片"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
-
+    <Button
+            android:id="@+id/test_progressBar"
+            android:text="异步模拟进度条"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 </LinearLayout>

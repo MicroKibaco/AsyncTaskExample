@@ -9,11 +9,12 @@ import android.widget.Button;
 import com.asiainfo.asynctask.R;
 
 /**
- *
+ *剖析AsyncTask异步加载机制
  */
 public class AsyncTaskActivity extends Activity implements View.OnClickListener {
 
     private Button mLoadImgBtn;
+    private Button mTestProgressBarBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +30,14 @@ public class AsyncTaskActivity extends Activity implements View.OnClickListener 
     private void initView() {
 
         mLoadImgBtn = (Button) findViewById(R.id.load_img);
+        mTestProgressBarBtn = (Button) findViewById(R.id.test_progressBar);
 
     }
 
     private void initListener() {
 
         mLoadImgBtn.setOnClickListener(this);
+        mTestProgressBarBtn.setOnClickListener(this);
     }
 
 
@@ -50,6 +53,12 @@ public class AsyncTaskActivity extends Activity implements View.OnClickListener 
             case R.id.load_img:
 
                 startActivity(new Intent(AsyncTaskActivity.this, ImageActivity.class));
+
+                break;
+
+            case R.id.test_progressBar:
+
+                startActivity(new Intent(AsyncTaskActivity.this, ProgressTestActivity.class));
 
                 break;
 
