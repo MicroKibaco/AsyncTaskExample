@@ -53,6 +53,11 @@ public class ProgressTestActivity extends Activity {
             super.onPreExecute();
         }
 
+        /**
+         *不能在此方法直接更新UI
+         * @param params
+         * @return
+         */
         @Override
         protected Void doInBackground(Void... params) {
 
